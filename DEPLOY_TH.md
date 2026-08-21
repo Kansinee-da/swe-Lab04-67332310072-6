@@ -12,7 +12,7 @@ requirements.txt
 
 1. **สร้าง Space บน HuggingFace**
    - ไปที่ huggingface.co → New Space → เลือก SDK เป็น **Streamlit**
-   - ตั้งชื่อ Space เช่น `your-name-rag-chatbot`
+   - ตั้งชื่อ Space ตาม convention ของ pivot: `<pivot-domain>-rag` เช่น `pangpang-rag`
 
 2. **สร้าง HF Token**
    - HuggingFace → Settings → Access Tokens → New token (สิทธิ์ **write**)
