@@ -1,10 +1,6 @@
 """
-Pivot: ปังปัง RAG Chatbot + Eval (adapted from MilkLab / Session 3)
-====================================================================
-โครง RAG (chunk -> embed -> FAISS -> retrieve -> Gemini prompt) เหมือนเดิมทุกจุด
-สิ่งที่เปลี่ยนจาก MilkLab มีแค่ knowledge base (menu_kb.md) กับ branding ในหน้า UI
-ด้านล่าง — พิสูจน์ว่า pattern เดิมใช้ซ้ำกับ domain ใหม่ได้จริง ไม่ใช่ copy-paste
-
+Session 3: Demi RAG Chatbot + Eval
+==================================
 ทำตามข้อ 2.2 (5 ข้อ) + TODO 6 (observability):
   1. โหลด menu_kb.md แล้ว split เป็น chunk
   2. encode chunk ด้วย sentence-transformers (multilingual-MiniLM)
@@ -208,9 +204,9 @@ def get_trace_for_id(trace_id: str) -> list[dict]:
 # ข้อ 4: Streamlit chat UI
 # ----------------------------------------------------------------------------
 def main():
-    st.set_page_config(page_title="ปังปัง RAG Chatbot", page_icon="🍞")
-    st.title("🍞 ปังปัง แชทบอทตอบคำถามเมนู")
-    st.caption("ถามคำถามเกี่ยวกับเมนูขนมปังปิ้งและร้านปังปังได้เลย — ตอบจาก knowledge base เท่านั้น")
+    st.set_page_config(page_title="Demi RAG Chatbot", page_icon="💬")
+    st.title("💬 Demi RAG Chatbot")
+    st.caption("ถามคำถามเกี่ยวกับเมนูและร้านได้เลย — ตอบจาก knowledge base เท่านั้น")
 
     if not GEMINI_API_KEY:
         st.warning("ยังไม่ได้ตั้งค่า GEMINI_API_KEY — ใส่ใน .streamlit/secrets.toml หรือ environment variable")
