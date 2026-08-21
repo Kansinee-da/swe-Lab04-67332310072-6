@@ -1,7 +1,7 @@
 streamlit
 sentence-transformers
 faiss-cpu
-google-generativeai
+google-genai
 numpy
 matplotlib
 nbformat
